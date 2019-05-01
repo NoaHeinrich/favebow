@@ -1,0 +1,17 @@
+<h1><%= @color.name %></h1>
+<h2><%= @color.hexcode %></h2>
+
+<p style="color: <%=@color.hexcode%>">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque elementum magna, a suscipit est gravida vitae. Proin quam nulla, accumsan ac gravida vitae, dignissim eu libero. Ut vitae magna non libero pellentesque semper. Vestibulum ut neque malesuada, commodo nunc ac, gravida dui. Maecenas pretium, nisl eu tempor placerat, nibh est vestibulum nulla, ac venenatis urna arcu nec libero. Suspendisse fermentum, leo et ultricies dictum, nisl tortor laoreet nisl, ut vulputate nunc purus eu ante. Morbi imperdiet magna vel ipsum tincidunt, id mollis mauris faucibus. Integer lectus nibh, porttitor sed elementum vitae, aliquet a quam.
+</p>
+
+<p style="color: <%=@color.hexcode%>">
+  Maecenas varius suscipit erat, vitae maximus nibh mattis sed. Donec nec risus leo. Nullam non tellus ultricies, vestibulum arcu at, ultricies dui. Suspendisse lacinia arcu nec dignissim dapibus. Donec metus lectus, convallis quis tempus sed, consequat sit amet neque. Ut arcu risus, aliquam sed arcu pretium, condimentum volutpat neque. Curabitur tincidunt non ligula vitae sagittis. Phasellus ullamcorper euismod nisi, in maximus nisl volutpat id. Ut condimentum tortor ex, in pellentesque quam dapibus a. Sed tincidunt neque in risus maximus scelerisque. Mauris eleifend ultricies imperdiet. Fusce vitae libero vel arcu auctor sodales. Etiam pretium dui ultrices sapien convallis sagittis.
+</p>
+
+<h4>Users who like this color:</h4>
+<ul>
+  <% @color.users.each do |user| %>
+    <li><%= link_to user.name, user_path(user) %></li>
+  <% end %>
+</ul>

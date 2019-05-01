@@ -1,0 +1,5 @@
+<ul>
+<% @colors.each do |color| %>
+  <li><%= link_to color.name, color, {:style => "color: #{color.hexcode}"} %></li>
+<% end %>
+</ul>
