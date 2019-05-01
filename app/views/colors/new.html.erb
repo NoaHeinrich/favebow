@@ -1,0 +1,15 @@
+<% if @errors %>
+  <% @errors.each do |error| %>
+    <%= error %>
+  <% end %>
+<% end %>
+<%= form_for @color do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  Please use hexcode format, ie "#000000"
+  <%= f.label :hexcode %>
+  <%= f.text_field :hexcode %>
+  <br>
+  <%= f.submit %>
+<% end %>

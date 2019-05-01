@@ -1,0 +1,7 @@
+<h1><%= @user.name %></h1>
+<h4><%=@user.name%>'s colors:</h4>
+<ol>
+  <% @user.colors.each do |color| %>
+    <li><%=link_to color.name, color_path(color) %></li>
+  <% end %>
+</ol>
